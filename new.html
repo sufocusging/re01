@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>酷炫个人网站</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      .navbar {
+        background: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .navbar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .navbar ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      .navbar ul li a {
+        color: #116d31;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .navbar ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .home {
+        background: url("https://via.placeholder.com/1920x1080") no-repeat
+          center center/cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .home-content h1 {
+        font-size: 48px;
+        margin: 0;
+      }
+
+      .home-content p {
+        font-size: 24px;
+      }
+
+      .about,
+      .projects,
+      .contact {
+        padding: 20px;
+        text-align: center;
+      }
+
+      .about h2,
+      .projects h2,
+      .contact h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      .project {
+        margin: 20px 0;
+      }
+
+      .project h3 {
+        font-size: 24px;
+      }
+
+      .project p {
+        font-size: 18px;
+      }
+
+      .project a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .project a:hover {
+        text-decoration: underline;
+      }
+
+      .contact a {
+        margin: 0 10px;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .contact a:hover {
+        text-decoration: underline;
+      }
+
+      #scrollToTop {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">首页</a></li>
+        <li><a href="#about">关于我</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#contact">联系我</a></li>
+      </ul>
+    </nav>
+
+    <!-- 首页 -->
+    <section id="home" class="home">
+      <div class="home-content">
+        <h1>你好，我是<i>sufocusging</i></h1>
+        <p>一名自学成才的程序员，追求技术的极致。</p>
+      </div>
+    </section>
+
+    <!-- 关于我 -->
+    <section id="about" class="about">
+      <h2>关于我</h2>
+      <p>
+        我是一名自学编程的小白程序员，目前专注于[编程语言/技术栈]。我喜欢探索新技术，解决复杂问题，并且热衷于开源项目。
+      </p>
+      <p>我的技能包括：</p>
+      <ul>
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>[其他技能]</li>
+      </ul>
+    </section>
+
+    <!-- 项目 -->
+    <section id="projects" class="projects">
+      <h2>我的项目</h2>
+      <div class="project">
+        <h3>项目名称</h3>
+        <p>项目描述：这是一个展示我技能的项目。</p>
+        <a href="项目链接" target="_blank">查看项目</a>
+      </div>
+      <!-- 可以继续添加更多项目 -->
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact">
+      <h2>联系我</h2>
+      <p>邮箱：<a href="mailto:你的邮箱">你的邮箱</a></p>
+      <p>社交媒体：</p>
+      <a href="你的GitHub链接" target="_blank">GitHub</a>
+      <a href="你的其他社交媒体链接" target="_blank">其他社交媒体</a>
+    </section>
+
+    <button id="scrollToTop" onclick="scrollToTop()">回到顶部</button>
+
+    <script>
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("scrollToTop").style.display = "block";
+        } else {
+          document.getElementById("scrollToTop").style.display = "none";
+        }
+      };
+
+      function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+  </body>
+</html>
