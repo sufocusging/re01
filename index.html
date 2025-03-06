@@ -1,47 +1,233 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>鲍远祥的个人网站</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>酷炫个人网站</title>
     <style>
       body {
+        font-family: Arial, sans-serif;
         margin: 0;
+        padding: 0;
+        color: #333;
+      }
+
+      .navbar {
+        background: #022751;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      .navbar ul {
+        list-style: none;
+        padding: 0;
+      }
+
+      .navbar ul li {
+        display: inline;
+        margin: 0 15px;
+      }
+
+      .navbar ul li a {
+        color: #80a9d9;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .navbar ul li a:hover {
+        text-decoration: underline;
+      }
+
+      .home {
+        background: url("https://via.placeholder.com/1920x1080") no-repeat
+          center center/cover;
+        background-color: #81b1e1;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        text-align: center;
+      }
+
+      .home-content h1 {
+        font-size: 48px;
+        margin: 0;
+      }
+
+      .home-content p {
+        font-size: 24px;
+      }
+
+      .about,
+      .projects {
+        padding: 20px;
+        text-align: center;
+        background-color: #81b1e1;
+        flex: 1;
+      }
+
+      .contact {
+        padding: 20px;
+        text-align: center;
+        background-color: #022751;
+        color: #80a9d9;
+      }
+
+      .about h2,
+      .projects h2,
+      .contact h2 {
+        font-size: 32px;
+        margin-bottom: 20px;
+      }
+
+      .project {
+        margin: 20px 0;
+        flex: 1;
+      }
+
+      .project h3 {
+        font-size: 24px;
+      }
+
+      .project p {
+        font-size: 18px;
+      }
+
+      .project a {
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .project a:hover {
+        text-decoration: underline;
+      }
+
+      .contact a {
+        margin: 0 10px;
+        color: #80a9d9;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      .contact a:hover {
+        text-decoration: underline;
+      }
+
+      #scrollToTop {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 999;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
       }
     </style>
   </head>
   <body>
-    <div style="background-color: #f1f1f1; text-align: center; padding: 40px">
-      <img src="logo.png" alt="鲍远祥" width="80px" height="80px" />
-    </div>
-    <div></div>
-    <div
-      style="
-        max-width: 760px;
-        margin: 30px auto;
-        padding: 15px;
-        line-height: 1.7;
-      "
-    >
-      <p>你好世界，我是鲍远祥</p>
-      <p>这是我的第一个网站</p>
-      <p>我计划把它打造成个人介绍的网站</p>
-      <p>像专业的工程师一样用网站介绍自己</p>
-      <p>感谢康老师给我打开编程大门的钥匙</p>
-      <p>我会努力学习早日成为一名优秀的技术工程师</p>
-      <p>让我们一起使这个世界变得更好</p>
-      <p>make the world better</p>
-    </div>
-    <div
-      style="
-        background-color: #f1f1f1;
-        text-align: center;
-        padding: 40px;
-        font-size: 12px;
-      "
-    >
-      <p>我的网站</p>
-      <a href="https://kangwenchang.com">友情链接</a>
-    </div>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+      <ul>
+        <li><a href="#home">首页</a></li>
+        <li><a href="#projects">项目</a></li>
+        <li><a href="#about">简介</a></li>
+        <li><a href="#contact">合作</a></li>
+      </ul>
+    </nav>
+
+    <!-- 首页 -->
+    <section id="home" class="home">
+      <div class="home-content">
+        <h1>你好，我是<i>sufocusging</i></h1>
+        <p>一名自学编程的未来优秀工程师。</p>
+      </div>
+    </section>
+
+    <!-- 项目 -->
+    <section id="projects" class="projects">
+      <h2>我的项目</h2>
+      <div style="display: flex">
+        <div class="project">
+          <h3>项目名称</h3>
+          <p>项目描述：XXXXXX。</p>
+          <a href="项目链接"
+            ><img src="logo.png" width="160px" height="160px"
+          /></a>
+        </div>
+        <div class="project">
+          <h3>项目名称</h3>
+          <p>项目描述：XXXXXX</p>
+          <a href="项目链接"
+            ><video height="160" controls>
+              <source src="shipin.mp4" /></video
+          ></a>
+        </div>
+        <div class="project">
+          <h3>项目名称</h3>
+          <p>项目描述：XXXXXX</p>
+          <a href="项目链接"
+            ><video height="160" controls>
+              <source src="电竞房青色.mp4" /></video
+          ></a>
+        </div>
+        <div class="project">
+          <h3>项目名称</h3>
+          <p>项目描述：XXXXXX</p>
+          <a href="项目链接"
+            ><video height="160" controls>
+              <source src="电竞房视频.mp4" /></video
+          ></a>
+        </div>
+      </div>
+      <!-- 可以继续添加更多项目 -->
+    </section>
+
+    <!-- 简介 -->
+    <section id="about" class="about">
+      <h2>简介</h2>
+      <p>
+        我是一名自学编程的小白程序员，本网站是我个人的简介网站，按照自己的喜好设计了本网站，你可以叫我苏见[suging]，目前正在学习前端内容，我希望成为一个伟大的工程师，做一些技术[汽车、环保、能源等行业]相关的事，我喜欢探索新技术，解决复杂问题，并且热衷于开源项目。我还在不断学习中，希望能找到一些志同道合的朋友，让我们一起Make
+        the world better。
+      </p>
+      <p>我的技能包括：</p>
+      <li>HTML/CSS</li>
+      <li>JavaScript</li>
+      <li>[其他技能]</li>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact" class="contact">
+      <h2>合作联系</h2>
+      <p>邮箱：<a href="https://mail.qq.com">378269866@qq.com</a></p>
+      <p>GitHub：<a href="https://github.com/">sufocusging</a></p>
+      <p>Wechat：<a href="https://wx.qq.com">sufocusging/19538006236</a></p>
+    </section>
+
+    <button id="scrollToTop" onclick="scrollToTop()">回到顶部</button>
+
+    <script>
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById("scrollToTop").style.display = "block";
+        } else {
+          document.getElementById("scrollToTop").style.display = "none";
+        }
+      };
+
+      function scrollToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
   </body>
 </html>
